@@ -1,7 +1,7 @@
 <center><div style="background: #3a3a3a;  padding: 5px; border-radius: 8px;">
     <img src="https://thekalki.net/wp-content/uploads/2025/03/TheKalki-Banner.png" width="350" />
 </div>
-
+</center>
 
 **AutoUpdate & AutoOS-Setup:**
 --
