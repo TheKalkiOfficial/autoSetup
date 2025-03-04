@@ -4,7 +4,7 @@
 
 
 **  AutoUpdate & AutoOS-Setup: **
---
+
 ## Description
 This program is an automated update and setup tool designed to streamline the update process on Linux systems, including Debian, Arch, and Red Hat-based distributions. The script intelligently detects the operating system, including the distribution and version, and then executes the appropriate update commands tailored to that environment. 
 
