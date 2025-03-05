@@ -428,60 +428,60 @@ do
     ./cyber_Security.sh
     echo "System will reboot in 5 seconds"
     echo "1"
-    delay 1s
+    sleep 1s
     echo "2"
-    delay 1s
+    sleep 1s
     echo "3"
-    delay 1s
+    sleep 1s
     echo "4"
-    delay 1s
+    sleep 1s
     echo "5"
-    delay 1s
+    sleep 1s
     sudo systemctl reboot
     break
     elif [ $prof -eq 2 ]; then
     ./network.sh
     echo "System will reboot in 5 seconds"
     echo "1"
-    delay 1000
+    sleep 1s
     echo "2"
-    delay 1000
+    sleep 1s
     echo "3"
-    delay 1000
+    sleep 1s
     echo "4"
-    delay 1000
+    sleep 1s
     echo "5"
-    delay 1000
+    sleep 1s
     sudo systemctl reboot
     break
     elif [ $prof -eq 3 ]; then
     ./programmer.sh
     echo "System will reboot in 5 seconds"
     echo "1"
-    delay 1000
+    sleep 1s
     echo "2"
-    delay 1000
+    sleep 1s
     echo "3"
-    delay 1000
+    sleep 1s
     echo "4"
-    delay 1000
+    sleep 1s
     echo "5"
-    delay 1000
+    sleep 1s
     sudo systemctl reboot
     break
     elif [ $prof -eq 4 ]; then
     ./editer.sh
     echo "System will reboot in 5 seconds"
     echo "1"
-    delay 1000
+    sleep 1s
     echo "2"
-    delay 1000
+    sleep 1s
     echo "3"
-    delay 1000
+    sleep 1s
     echo "4"
-    delay 1000
+    sleep 1s
     echo "5"
-    delay 1000
+    sleep 1s
     sudo systemctl reboot
     break
     elif [ "$prof" -eq 5 ]; then

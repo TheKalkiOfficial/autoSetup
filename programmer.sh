@@ -14,7 +14,7 @@ Debian_programmer ()
         flatpak install flathub com.slack.Slack -y
 }
 
-"
+
 Arch_programmer ()
 {
     #vscode_install

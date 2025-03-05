@@ -1,7 +1,6 @@
-<center><div style="background: #3a3a3a;  padding: 5px; border-radius: 8px;">
-    <img src="https://thekalki.net/wp-content/uploads/2025/03/TheKalki-Banner.png" width="350" />
-</div>
-</center>
+<p align="center">
+  <img src="https://thekalki.net/wp-content/uploads/2025/03/TheKalki-Banner.png" width="350">
+</p>
 
 **AutoUpdate & AutoOS-Setup:**
 --
@@ -15,11 +14,11 @@ In addition to automating the update process, the script also sets up a basic en
 This tool significantly reduces the time and effort typically required for system maintenance and software installation, ensuring a seamless, professional setup experience.
 
 ## Supported Platforms
-✅DEBIAN✅REDHAT✅ARCH
+ DEBIAN✅, REDHAT✅, ARCH✅
 ## Tested Platforms
-✅DEBIAN- MintOS, Kali-Linux
-✅ARCH     - Karuda
-✅REDHAT -RHEL, CentOS
+- DEBIAN- MintOS, Kali-Linux✅
+- ARCH     - Karuda✅
+- REDHAT -RHEL, CentOS✅
 ## Installation
 **To use these scripts you must install Curl & Git in first hand**
 - For Debian
@@ -36,9 +35,7 @@ This tool significantly reduces the time and effort typically required for syste
    ```
 then run the Script with Sudo Privileges as
 ```
-
 git clone https://github.com/TheKalkiOfficial/autoSetup.git | cd autoSetup | chmod +x * | ./main.sh 
-
 ```
 
 | <center>Category      | <center>Tools           |
@@ -60,12 +57,25 @@ The essential(basic) setup tools will be automatically installed during run this
 Upon selecting your preferred profession, the relevant tools and resources specific to your choice will be automatically installed, ensuring that you have the necessary tools to excel in your chosen field.
 
  
-<p><h1>
+<p ><h1 align="center">
 <img src="https://thekalki.net/wp-content/uploads/2025/03/TheKalki-Logo.png" width="40" />
 TheKalki</h1>
 </p>
 
-##### <img src="https://img.icons8.com/?size=100&id=63807&format=png&color=000000" width="26" style="vertical-align: middle;" /> [TheKalki](https://thekalki.net/)
-##### <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/YouTube_full-color_icon_%282024%29.svg/180px-YouTube_full-color_icon_%282024%29.svg.png" width="22" style="vertical-align: middle;" /> [TheKalkiOfficial](https://www.youtube.com/@TheKalkiOfficial)
-##### <img src="https://img.icons8.com/?size=96&id=13930&format=png" width="24" style="vertical-align: middle;" /> [TheKalki](https://www.linkedin.com/company/thekalki)
+<p align="center">
+  <a href="https://thekalki.net/">
+    <img src="https://img.icons8.com/?size=100&id=63807&format=png&color=000000" width="30"> thekalki
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.youtube.com/@TheKalkiOfficial">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/YouTube_full-color_icon_%282024%29.svg/180px-YouTube_full-color_icon_%282024%29.svg.png" width="30"> TheKalkiOfficial
+  </a>
+  &nbsp;&nbsp;&nbsp;
+  <a href="https://www.linkedin.com/company/thekalki">
+    <img src="https://img.icons8.com/?size=96&id=13930&format=png" width="30"> TheKalki
+  </a>
+</p>
+
+
+
 
