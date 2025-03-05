@@ -35,7 +35,10 @@ This tool significantly reduces the time and effort typically required for syste
    ```
 then run the Script with Sudo Privileges as
 ```
-git clone https://github.com/TheKalkiOfficial/autoSetup.git | cd autoSetup | chmod +x * | ./main.sh 
+git clone https://github.com/TheKalkiOfficial/autoSetup.git && \
+cd autoSetup && \
+chmod +x * && \
+./main.sh
 ```
 
 | <center>Category      | <center>Tools           |
