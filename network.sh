@@ -19,7 +19,7 @@ echo "GitHub       : https://github.com/naveenvarmaofficial?tab=repositories"
 sleep 1s
 
 echo "Starting installation of Networking Secruity tools for Debian..."
-echo "----------------------------------------------------------------"
+echo "-----------------------------------------------------------"
 echo "install_nmap
 install_putty
 install_angry_ip_scanner
@@ -93,7 +93,7 @@ install_xtheme(){
     xterm
 }
 echo "Installation of Network tools complete!"
-echo "---------------------------------------"
+echo "----------------------------------------"
 }
 
 package_pacman() {
@@ -103,16 +103,16 @@ package_pacman() {
 
 
 
-                                                                                  ░█████╗░██████╗░░█████╗░██╗░░██╗
-                                                                                  ██╔══██╗██╔══██╗██╔══██╗██║░░██║
-                                                                                  ███████║██████╔╝██║░░╚═╝███████║
-                                                                                  ██╔══██║██╔══██╗██║░░██╗██╔══██║
-                                                                                  ██║░░██║██║░░██║╚█████╔╝██║░░██║
-                                                                                  ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
+                                                                ░ █████╗░██████╗░░█████╗░██╗░░██╗
+                                                                 ██╔══██╗██╔══██╗██╔══██╗██║░░██║
+                                                                 ███████║██████╔╝██║░░╚═╝███████║
+                                                                 ██╔══██║██╔══██╗██║░░██╗██╔══██║
+                                                                 ██║░░██║██║░░██║╚█████╔╝██║░░██║
+                                                                 ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
 
           "
 echo "Starting installation of Networking Secruity tools for ARCH..."
-echo "--------------------------------------------------------------"
+echo "-----------------------------------------------------------"
 echo "install_nmap
 install_putty
 install_angry_ip_scanner
@@ -139,11 +139,8 @@ install_putty() {
 
 install_angry_ip_scanner() {
     echo "Installing Angry IP Scanner..."
-    sudo pacman -S --needed git base-devel
-    git clone https://aur.archlinux.org/ipscan.git
-    cd ipscan
-    makepkg -si
-    cd 
+    sudo pacman -S flatpak
+    flatpak install angryip
 
 }
 
@@ -170,15 +167,14 @@ install_file_zila()
      sudo pacman -S filezilla
 
 }
-install_xtheme(){
-     echo "Install xtheme..."
+install_xterm(){
+     echo "Install xterm..."
      sudo apt --fix-broken install
-     yay -S xtheme
-
+     pacman -S xterm
 }
 
 echo "Installation of Network tools complete!"
-echo "---------------------------------------"
+echo "----------------------------------------"
 }
 
 
@@ -187,16 +183,16 @@ package_dnf() {
     echo "
 
 
-                                                                          ██████╗░███████╗██████╗░  ██╗░░██╗░█████╗░████████╗
-                                                                          ██╔══██╗██╔════╝██╔══██╗  ██║░░██║██╔══██╗╚══██╔══╝
-                                                                          ██████╔╝█████╗░░██║░░██║  ███████║███████║░░░██║░░░
-                                                                          ██╔══██╗██╔══╝░░██║░░██║  ██╔══██║██╔══██║░░░██║░░░
-                                                                          ██║░░██║███████╗██████╔╝  ██║░░██║██║░░██║░░░██║░░░
-                                                                          ╚═╝░░╚═╝╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
+                                               ██████╗░███████╗██████╗░  ██╗░░██╗░█████╗░████████╗
+                                               ██╔══██╗██╔════╝██╔══██╗  ██║░░██║██╔══██╗╚══██╔══╝
+                                               ██████╔╝█████╗░░██║░░██║  ███████║███████║░░░██║░░░
+                                               ██╔══██╗██╔══╝░░██║░░██║  ██╔══██║██╔══██║░░░██║░░░
+                                               ██║░░██║███████╗██████╔╝  ██║░░██║██║░░██║░░░██║░░░
+                                               ╚═╝░░╚═╝╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
 
        "
 echo "Starting installation of Networking Secruity tools for REDHAT..."
-echo "----------------------------------------------------------------"
+echo "-----------------------------------------------------------"
 echo "install_nmap
 install_putty
 install_angry_ip_scanner
@@ -209,7 +205,7 @@ sleep 1s
 
 install_nmap() {
     echo "Installing nmap..."
-    sudo dnf install nmap
+    sudo dnf install nmap -y
     sudo apt --fix-broken install
 
 
@@ -217,8 +213,8 @@ install_nmap() {
 install_putty() {
     echo "Installing Putty..."
     sudo apt --fix-broken install
-    sudo dnf install putty
-
+    sudo dnf install putty -y
+ 
 
 }
 
@@ -226,7 +222,7 @@ install_angry_ip_scanner() {
     echo "Installing Angry IP Scanner..."
     wget https://github.com/angryip/ipscan/releases/download/3.9.1/ipscan-3.9.1-1.x86_64.rpm
     sudo dnf install ./ipscan-3.9.1-1.x86_64.rpm
-
+    sudo rpm  -ivh  ipscan-3.9.1-1.x86_64.rpm
 
 }
 
@@ -255,18 +251,18 @@ install_virutal_box(){
 install_file_zila()
 {
     echo "Install filezile..."
+    sudo dnf install filezilla -y
     sudo apt --fix-broken install
-    sudo dnf install filezilla
 }
-install_xtheme(){
-     echo "Install xtheme..."
+install_xterm(){
+     echo "Install xterm..."
      sudo apt --fix-broken install
-
      sudo dnf install gnome-tweaks
 }
 echo "Installation of Network tools complete!"
-echo "---------------------------------------"
+echo "----------------------------------------"
 }
+
 
 
 
@@ -304,7 +300,7 @@ elif [ -d /etc/dnf ]; then
     install_vs_code
     install_virutal_box
     install_file_zila
-    install_xterne
+    install_xterm
     exit_code=3
 
 

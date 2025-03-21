@@ -14,28 +14,15 @@ package_apt_edit()
     rm ~/Downloads/DaVinci_Resolve.zip
 
 }
-
-
-
 #editing software in Arch
 package_pacman_edit()
 {
     sudo pacman -Syu kdenlive
     sudo pacman -Syu wine
-    #yay -S davinci-resolve
-    cd Downloads
-    git clone https://aur.archlinux.org/davinci-resolve.git
-    cd davinci-resolve
-    makepkg
-    sudo pacman -S libpng12 lib32-libpng12 ocl-icd openssl-1.0 opencl-driver qt5-websockets
-    makepkg
-    rm ~/Downloads/davinci-resolve
-
+    yay -S davinci-resolve
 
 
 }
-
-
 #editing software in Redhat (yum)
 package_yum_edit()
 {

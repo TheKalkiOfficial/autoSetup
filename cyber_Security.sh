@@ -1,11 +1,11 @@
 #!/bin/bash
 echo "
-                          ████████╗██╗░░██╗███████╗██╗░░██╗░█████╗░██╗░░░░░██╗░░██╗██╗
-                          ╚══██╔══╝██║░░██║██╔════╝██║░██╔╝██╔══██╗██║░░░░░██║░██╔╝██║
-                          ░░░██║░░░███████║█████╗░░█████═╝░███████║██║░░░░░█████═╝░██║
-                          ░░░██║░░░██╔══██║██╔══╝░░██╔═██╗░██╔══██║██║░░░░░██╔═██╗░██║
-                          ░░░██║░░░██║░░██║███████╗██║░╚██╗██║░░██║███████╗██║░╚██╗██║
-                          ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝
+                             ████████╗██╗░░██╗███████╗██╗░░██╗░█████╗░██╗░░░░░██╗░░██╗██╗
+                             ╚══██╔══╝██║░░██║██╔════╝██║░██╔╝██╔══██╗██║░░░░░██║░██╔╝██║
+                             ░░░██║░░░███████║█████╗░░█████═╝░███████║██║░░░░░█████═╝░██║
+                             ░░░██║░░░██╔══██║██╔══╝░░██╔═██╗░██╔══██║██║░░░░░██╔═██╗░██║
+                             ░░░██║░░░██║░░██║███████╗██║░╚██╗██║░░██║███████╗██║░╚██╗██║
+                             ░░░╚═╝░░░╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚═╝░░╚═╝╚═╝
 
 
                                                         .
@@ -79,6 +79,7 @@ install_nmap() {
     sudo apt --fix-broken install -y
     sudo apt install -y nmap
 }
+# function to install bursuire
 install_bur_suite()
 {
     echo "Installing burpsuite"
@@ -145,8 +146,8 @@ install_john_the_ripper() {
     john   
 }
 
-echo "Installation of Cyber  security tools complete!"
-echo "-----------------------------------------------"
+echo "Installation of security tools complete!"
+echo "---------------------------------------"
 }
 
 
@@ -157,13 +158,12 @@ package_pacman() {
 
 
 
-
-                                                                                 ░█████╗░██████╗░░█████╗░██╗░░██╗
-                                                                                 ██╔══██╗██╔══██╗██╔══██╗██║░░██║
-                                                                                 ███████║██████╔╝██║░░╚═╝███████║
-                                                                                 ██╔══██║██╔══██╗██║░░██╗██╔══██║
-                                                                                 ██║░░██║██║░░██║╚█████╔╝██║░░██║
-                                                                                 ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
+                                               ░█████╗░██████╗░░█████╗░██╗░░██╗
+                                               ██╔══██╗██╔══██╗██╔══██╗██║░░██║
+                                               ███████║██████╔╝██║░░╚═╝███████║
+                                               ██╔══██║██╔══██╗██║░░██╗██╔══██║
+                                               ██║░░██║██║░░██║╚█████╔╝██║░░██║
+                                               ╚═╝░░╚═╝╚═╝░░╚═╝░╚════╝░╚═╝░░╚═╝
 
           "
 sleep  1s
@@ -171,9 +171,9 @@ echo "website      : https://thekalki.net/ "
 echo "github.com   : https://github.com/naveenvarmaofficial?tab=repositories"
 sleep 1s
 
-echo "Starting installation of cy ber  security tools for  Arch..."
-echo "------------------------------------------------------------"
-echo"
+echo "Starting installation of security tools for  Arch..."
+echo "----------------------------------------------------"
+echo "
 install_nmap
 install_aircrack_ng
 install_wireshark
@@ -207,17 +207,14 @@ install_wireshark() {
 install_bur_suite() {
     echo "Installing Burp Suite..."
     yay -S burpsuite
-    java -jar burpsuite_community_vX.X.X.jar
+    
 
 }
 
 install_angry_ip_scanner() {
     echo "Installing Angry IP Scanner..."
-    sudo pacman -S --needed git base-devel
-    git clone https://aur.archlinux.org/ipscan.git
-    cd ipscan
-    makepkg -si
-    cd 
+    sudo pacman -S flatpak
+    flatpak install angryip
     echo
     ls
     sleep 1s
@@ -247,8 +244,8 @@ install_john_the_ripper() {
     sleep 1s
 }
 
-echo "Installation of cyber security tools compalete!"
-echo "-----------------------------------------------"
+echo "Installation of security tools compalete!"
+echo "-----------------------------------------"
 }
 
 
@@ -257,12 +254,13 @@ package_yum() {
     echo "
 
 
-                                                                                      ██████╗░███████╗██████╗░  ██╗░░██╗░█████╗░████████╗
-                                                                                      ██╔══██╗██╔════╝██╔══██╗  ██║░░██║██╔══██╗╚══██╔══╝
-                                                                                      ██████╔╝█████╗░░██║░░██║  ███████║███████║░░░██║░░░
-                                                                                      ██╔══██╗██╔══╝░░██║░░██║  ██╔══██║██╔══██║░░░██║░░░
-                                                                                      ██║░░██║███████╗██████╔╝  ██║░░██║██║░░██║░░░██║░░░
-                                                                                      ╚═╝░░╚═╝╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
+
+                                 ██████╗░███████╗██████╗░  ██╗░░██╗░█████╗░████████╗
+                                 ██╔══██╗██╔════╝██╔══██╗  ██║░░██║██╔══██╗╚══██╔══╝
+                                 ██████╔╝█████╗░░██║░░██║  ███████║███████║░░░██║░░░
+                                 ██╔══██╗██╔══╝░░██║░░██║  ██╔══██║██╔══██║░░░██║░░░
+                                 ██║░░██║███████╗██████╔╝  ██║░░██║██║░░██║░░░██║░░░
+                                 ╚═╝░░╚═╝╚══════╝╚═════╝░  ╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░
 
        "
 
@@ -271,8 +269,8 @@ echo "website      : https://thekalki.net/ "
 echo "github.com   : https://github.com/naveenvarmaofficial?tab=repositories"
 sleep 1s
 
-echo "Starting installation of cyber security toolsin Redhat..."
-echo "---------------------------------------------------------"
+echo "Starting installation of security tools in RedHat..."
+echo "-------------------------------------------------"
 echo "
 install_nmap
 install_aircrack_ng
@@ -285,16 +283,13 @@ install_john_the_ripper"
 sleep 1s
 install_nmap() {
     echo "Installing nmap..."
+    sudo dnf install nmap -y   
     sudo apt --fix-broken install -y
-    sudo dnf check-update
-    sudo dnf upgrade
-    sudo dnf update
-
 }
 
 install_aircrack_ng() {
     echo "Installing aircrack-ng..."
-    sudo dnf install nmap
+    sudo dnf install aircrack-ng -y
 }
 
 install_wireshark() {
@@ -305,58 +300,34 @@ install_wireshark() {
 }
 
 install_bur_suite() {
-    echo "Installing Burp Suite..."
-    wget "https://portswigger.net/burp/releases/download?product=community&version=&type=Linux" -O burpsuite.sh
-    chmod +x burpsuite.sh
-    ./burpsuite.sh
-    echo 
-    ls
-    sleep 1s
+	echo "Installing BurpSuite"
+	wget "https://portswigger-cdn.net/burp/releases/download?product=pro&version=2025.1.4&type=Linux" -O burp.sh
+	chmod +x burp.sh
+	./burp.sh
 }
-
 install_angry_ip_scanner() {
     echo "Installing Angry IP Scanner..."
-    wget https://github.com/angryip/ipscan/releases/download/3.7.5/ipscan-3.7.5-setup.tar.xz
-    tar -xvf ipscan-3.7.5-setup.tar.xz
-    sudo dnf install java-1.8.0-openjdk
-    echo
-     ls
-    sleep 1s
+	sudo dnf install flatpak
+	sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+	sudo flatpak install angryip
 }
-
 install_metasploit() {
     echo "Installing Metasploit..."
     curl -o metasploit-latest-linux-x64-installer.run https://downloads.metasploit.com/data/releases/metasploit-latest-linux-x64-installer.run
     chmod +x metasploit-latest-linux-x64-installer.run
     sudo ./metasploit-latest-linux-x64-installer.run
-    sudo msfdb init
    echo
    ls
-   sleep 1s
-}
+   sleep 1s}
 
 install_hashcat() {
     echo "Installing Hashcat..."
-    sudo dnf install -y gcc-c++ make automake libtool
-    sudo dnf install -y nvidia-driver nvidia-settings
-    sudo dnf install -y ocl-icd
-    wget https://github.com/hashcat/hashcat/releases/download/v6.2.5/hashcat-6.2.5-linux-x86_64.tar.gz
-    tar -xvzf hashcat-6.2.5-linux-x86_64.tar.gz
-    echo
-    ls
-    sleep 1s
+    sudo dnf install hashcat -y
 }
 
 install_john_the_ripper() {
     echo "Installing John the Ripper..."
-    sudo dnf install -y gcc make automake libtool openssl-devel git
-    git clone https://github.com/openwall/john.git
-    cd john
-    cd src
-    makepkg -si    
-    echo
-    ls
-    sleep 1s
+    sudo dnf install john -y
 }
 echo "Cybersecurity Tools Installation Completed!"
 echo "-------------------------------------------" 
@@ -410,6 +381,6 @@ else
 fi
 
 echo "Exit code: $exit_code"
-echo "OS update and upgrade completed successfully!"
-echo "---------------------------------------------"
+echo "       OS update and upgrade completed successfully!   "
+echo "------------------------------------------------------------"
 

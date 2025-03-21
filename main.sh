@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 echo "
 
 
@@ -59,7 +60,7 @@ pacman="/bin/pacman"
 dnf="/etc/dnf"
 
 echo "-------------------------------------------------"
-echo       " Initializing Update Process"
+echo       " Initializing Update "
 echo "--------------------------------------------------"
 # Function to update apt-based systems
 apt_update()
@@ -86,6 +87,14 @@ dnf_update()
     echo "DNF package IN"
     sudo dnf update -y && sudo dnf upgrade -y
 }
+echo "  1.)Libreoffice"
+echo "  2.)Vlc"
+echo "  3.)Firefox"
+echo "  4.)Qbittorrent"
+echo "  5.)Protonvpn"
+echo "  6.)Anydesk"
+echo "  7.)Python3"
+sleep 0.5s
 
 # Functions for setting the Basicsetup
 # Function to install Libreoffice
@@ -174,19 +183,12 @@ ProtonVPN_install ()
     pipx ensurepath
     pipx install protonvpn-cli    
 }
-AnyDesk_install ()
+Anydesk_install ()
 {
     
-    sudo pacman -S --needed base-devel git
-    git clone https://aur.archlinux.org/yay.git
-    cd yay
-    makepkg -si
+    sudo pacman -S --needed git base-devel yay
+    yay
     yay -S anydesk-bin
-    cd 
-    sudo locale-gen
-    echo "LANG=en_US.UTF-8" | sudo tee /etc/locale.conf 
-    export LANG=en_US.UTF-8
-    source /etc/locale.conf
 
 }
 python_install ()
@@ -249,8 +251,7 @@ Redhat_dnf_installs ()
 # Function to install vlc
 vlc_install()
 {
-    sudo dnf install https://download1.rpmfusion.org/free/el/rpmfusion-free-release-9.noarch.rpm
-    sudo dnf install vlc
+	sudo dnf install vlc -y
 }
 # Funtion to install firefox
 firefox_install()
@@ -283,13 +284,6 @@ if [ -d "$apt" ]; then
     echo "---------------------------------------------------------------------------"
     echo      " Initializing  Basic Tools Setup: "
     echo "---------------------------------------------------------------------------"
-    echo "  1.)Libreoffice"
-    echo "  2.)Vlc"
-    echo "  3.)Firefox"
-    echo "  4.)Qbittorrent"
-    echo "  5.)Protonvpn"
-    echo "  6.)Anydesk"
-    echo "  7.)Python3"
     Debian_installs
     Libreoffice_install
     vlc_install
@@ -303,13 +297,6 @@ elif [ -e "$pacman" ]; then
     echo "--------------------------------------------------------------------------"
     echo      " Initializing  Basic Tools Setup: "
     echo "--------------------------------------------------------------------------"
-    echo "  1.)Libreoffice"
-    echo "  2.)Vlc"
-    echo "  3.)Firefox"
-    echo "  4.)Qbittorrent"
-    echo "  5.)Protonvpn"
-    echo "  6.)Anydesk"
-    echo "  7.)Python3"
     Arch_installs
     Libreoffice_install
     python_install
@@ -324,13 +311,6 @@ elif [ -d "$yum" ]; then
     echo "-------------------------------------------------------------------------"
     echo      " Initializing  Basic Tools Setup: "
     echo "-------------------------------------------------------------------------"
-    echo "  1.)Libreoffice"
-    echo "  2.)Vlc"
-    echo "  3.)Firefox"
-    echo "  4.)Qbittorrent"
-    echo "  5.)Protonvpn"
-    echo "  6.)Anydesk"
-    echo "  7.)Python3"
     Redhat_yum_installs
     Libreoffice_install
     vlc_install
@@ -344,13 +324,6 @@ elif [ -d "$dnf" ]; then
     echo "------------------------------------------------------------------------"
     echo      " Initializing  Basic Tools Setup: "
     echo "-------------------------------------------------------------------------"
-    echo "  1.)Libreoffice"
-    echo "  2.)Vlc"
-    echo "  3.)Firefox"
-    echo "  4.)Qbittorrent"
-    echo "  5.)Protonvpn"
-    echo "  6.)Anydesk"
-    echo "  7.)Python3"
     Redhat_dnf_installs
     Libreoffice_install
     vlc_install
@@ -410,13 +383,13 @@ echo    "
 echo "----------------------------------------------------------------------------------------"
 echo Choose the Professional to install the Profession related software
 echo "----------------------------------------------------------------------------------------"
-echo "1) Cyber_security (nmap, aircrack_ng, wireshark, bur_suite, angry_ip_scanner, metasploit, hashcat, john_the_ripper)"
+echo "1) Cyber_security / nmap/ aircrack_ng/ wireshark/ bur_suite/ angry_ip_scanner/ metasploit/ hashcat/ john_the_ripper/"
 echo
-echo "2) Networking     (nmap, putty,angry_ip_scanner, vs_code, virutal_box, file_zila, xterne)"
+echo "2) Networking    / nmap/ putty/ angry_ip_scanner/ vs_code/ virutal_box/ file_zila/ xterne/"
 echo
-echo "3) Programmer     (VScode , Slack)"
+echo "3) Programmer   / VScode   / Slack/"
 echo
-echo "4) Editor         (Kdenlive, Wine, Davinci_resolve)" 
+echo "4) Editor      / Kdenlive / Wine/ Davinci_resolve/" 
 echo
 echo "5) Exit"
 echo
@@ -437,7 +410,7 @@ do
     sleep 1s
     echo "5"
     sleep 1s
-    sudo systemctl reboot
+    reboot
     break
     elif [ $prof -eq 2 ]; then
     ./network.sh
@@ -452,7 +425,7 @@ do
     sleep 1s
     echo "5"
     sleep 1s
-    sudo systemctl reboot
+    reboot
     break
     elif [ $prof -eq 3 ]; then
     ./programmer.sh
@@ -467,7 +440,7 @@ do
     sleep 1s
     echo "5"
     sleep 1s
-    sudo systemctl reboot
+    reboot
     break
     elif [ $prof -eq 4 ]; then
     ./editer.sh
@@ -482,7 +455,7 @@ do
     sleep 1s
     echo "5"
     sleep 1s
-    sudo systemctl reboot
+    reboot
     break
     elif [ "$prof" -eq 5 ]; then
     echo "Exiting the script."

@@ -1,5 +1,4 @@
 #!/bin/bash
-
 Debian_programmer ()
 {
     #VSCode Installation
@@ -13,22 +12,14 @@ Debian_programmer ()
         sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
         flatpak install flathub com.slack.Slack -y
 }
-
-
 Arch_programmer ()
 {
     #vscode_install
-        sudo pacman -S visual-studio-code-bin
+        yay -S visual-studio-code-bin
     #slack_install
         sudo pacman -S alsa-lib pulseaudio pulseaudio-alsa
-        sudo pacman -S git
-        git clone https://aur.archlinux.org/yay-git.git
-        cd yay-git
-        makepkg -si
-        cd 
         yay -S slack-desktop
 }
-
 Redhat_yumprogrammer ()
 {
     #vscode_install
@@ -38,16 +29,15 @@ Redhat_yumprogrammer ()
         sudo yum install code # or code-insiders
     #slack_install ()
         wget https://downloads.slack-edge.com/desktop-releases/linux/x64/4.41.105/slack-4.41.105-0.1.el8.x86_64.rpm
-        sudo yum install ./slack-4.27.0-0.1.el7.x86_64.rpm
+	sudo rpm -i slack-4.41.105-0.1.el8.x86_64.rpm
 }
 Redhat_dnfprogrammer ()
 {
     #vscode_install
-       sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc 
-       sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" > /etc/yum.repos.d/vscode.repo'
-       wget https://code.visualstudio.com/sha/download?build=stable&os=linux-rpm -O vscode.rpm
-       sudo dnf check-update
-       sudo dnf install vscode.rpm
+     sudo apt --fix-broken install
+     sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc
+     sudo sh -c 'echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\ngpgcheck=1" > /etc/yum.repos.d/vscode.repo'
+     sudo dnf install code
     #slack
        wget https://downloads.slack-edge.com/desktop-releases/linux/x64/4.41.105/slack-4.41.105-0.1.el8.x86_64.rpm
        sudo dnf install slack-4.41.105-0.1.el8.x86_64.rpm
